@@ -1,0 +1,337 @@
+﻿@-webkit-keyframes loading {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes loading {
+    from {
+        -moz-transform: rotate(0deg)
+    }
+
+    to {
+        -moz-transform: rotate(360deg)
+    }
+}
+
+@-o-keyframes loading {
+    from {
+        -o-transform: rotate(0deg)
+    }
+
+    to {
+        -o-transform: rotate(360deg)
+    }
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .modal-open .navbar-command {
+        padding-right: 17px;
+    }
+}
+
+body {
+    background-image: url('./Images/bg.png');
+    font-family: 'Microsoft JhengHei UI', 'Microsoft JhengHei','Apple LiGothic Medium';
+}
+
+.material-icons {
+    font-size: inherit !important;
+    vertical-align: middle;
+}
+
+.navbar {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    width: 100%;
+    z-index: 150;
+}
+
+.side-nav {
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &.visible {
+        pointer-events: auto;
+
+        &:before {
+            opacity: .7;
+        }
+
+        .side-nav-content {
+            transform: translateX(0px);
+        }
+    }
+
+    &:before {
+        will-change: opacity;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0;
+        display: block;
+        position: absolute;
+        transition: opacity 233ms cubic-bezier(0,0,.21,1);
+        content: '';
+    }
+
+    &-content {
+        background: #FAFAFA;
+        width: 250px;
+        height: 100%;
+        overflow: hidden;
+        box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+        will-change: transform;
+        -webkit-transform: translateX(-102%);
+        transform: translateX(-102%);
+        transition: -webkit-transform 233ms cubic-bezier(0,0,.21,1);
+        transition: transform 233ms cubic-bezier(0,0,.21,1);
+        transition: transform 233ms cubic-bezier(0,0,.21,1),-webkit-transform 233ms cubic-bezier(0,0,.21,1);
+    }
+
+    &-header {
+        background-image: url('Images/side-nav-bg.jpg');
+        background-color: #3F51B5;
+        background-size: cover;
+        width: 100%;
+        height: 150px;
+        position: relative;
+    }
+
+    &-body {
+        padding-top: 8px;
+    }
+}
+
+.form-content {
+    margin-top: 75px;
+}
+
+.form-signin {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 205;
+
+    .form-signin-section {
+        width: 100%;
+        max-width: 420px;
+        padding: 15px;
+        margin: 10% auto 0 auto;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .form-label-group {
+        margin-bottom: 1rem;
+    }
+}
+
+.form-disconnected {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(./Font/material-icons.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.table-cursor {
+    cursor: pointer;
+}
+
+td.ellipsis {
+    max-width: 0;
+    white-space: nowrap;
+
+    div {
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+}
+
+.loading {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    z-index: 1000;
+    height: 50px;
+    width: 50px;
+    -webkit-animation: loading 3s infinite linear;
+    -moz-animation: loading 3s infinite linear;
+    -o-animation: loading 3s infinite linear;
+    animation: loading 3s infinite linear
+}
+
+#img-userImage {
+    padding: 3px;
+    width: 120px;
+}
+
+.js-edit-submit:disabled {
+    cursor: not-allowed;
+}
+
+#btn-update:disabled:before {
+    content: '唯讀不可';
+}
+
+#btn-create:disabled:after {
+    content: '中...';
+}
+
+.js-edit-required.border-danger {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #dc3545;
+    }
+
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: #dc3545;
+    }
+
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: #dc3545;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        color: #dc3545;
+    }
+}
+
+/* The actual popup (appears on top) */
+.popuptext {
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -80px;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dropdown-item.invisible {
+    display: none;
+}
+
+.introduction {
+    font-size: 1.1rem;
+
+    & ol li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "pure-pwa", ".", "{74481EAA-BB00-4E2C-8157-AAAFD558DA37}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58264"
+		Debug.AspNetCompiler.PhysicalPath = "..\pure-pwa\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58264\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58264"
+		Release.AspNetCompiler.PhysicalPath = "..\pure-pwa\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58264\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58264"
+		SlnRelativePath = "..\pure-pwa\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74481EAA-BB00-4E2C-8157-AAAFD558DA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74481EAA-BB00-4E2C-8157-AAAFD558DA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		LessCompiler = 74481eaa-bb00-4e2c-8157-aaafd558da37
+		SolutionGuid = {205A718A-7C56-488C-8B06-5330F82B7243}
+	EndGlobalSection
+EndGlobal

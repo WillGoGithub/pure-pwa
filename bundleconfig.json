@@ -1,0 +1,32 @@
+[
+  {
+    "outputFileName": "Scripts/app-1.0.9.min.js",
+    "inputFiles": [
+      "Scripts/app-1.0.9.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/app-1.0.0.min.js",
+    "inputFiles": [
+      "Scripts/app-1.0.0.js"
+    ]
+  },
+  {
+    "outputFileName": "service-worker-1.0.0.min.js",
+    "inputFiles": [
+      "service-worker-1.0.0.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/slot.min.css",
+    "inputFiles": [
+      "Content/slot.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/slot.min.js",
+    "inputFiles": [
+      "Scripts/slot.js"
+    ]
+  }
+]
