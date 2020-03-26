@@ -1,3 +1,5 @@
+image: bcksysrds/gitlab-ci-pipeline-for-laravel
+
 stages:
   - deploy
 
