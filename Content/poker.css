@@ -85,6 +85,7 @@
 }
 .poker-container .actions .btn {
   margin: 0 5px;
+  background: #fff;
 }
 .poker-container button:first-letter {
   text-decoration: underline;
