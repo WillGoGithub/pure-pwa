@@ -3,6 +3,7 @@ const MENU2 = 'Intro';
 const MENU3 = 'Slot';
 const MENU4 = 'Wheel';
 const MENU5 = 'Poker';
+const applicationServerPublicKey = 'BPKG6mdbOcsA_m_g4CUnEuVIQQhAm4KwJv3Hp8xCvy37VSDRURlROvw9QyS8Sr98Q-A_m3aexKy7ucUFaaR_jNA';
 let registration = null;
 let isSubscribed = null;
 let dataReaded = false;
@@ -200,6 +201,7 @@ function Init() {
 
 // 初始化通知
 function InitNoticeUI() {
+    console.log('in');
     if (registration !== null && 'PushManager' in window) {
         // Set the initial subscription value
         registration.pushManager.getSubscription()
