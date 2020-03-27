@@ -1,0 +1,26 @@
+image: bcksysrds/gitlab-ci-pipeline-for-laravel
+
+stages:
+  - deploy
+
+.init_rsync: &init_rsync |
+  echo ${RSYNC_SECRET} > /etc/rsync.secret
+  chmod 600 /etc/rsync.secret
+
+.change_file_permissions: &change_file_permissions |
+  find . -type f -not -path './node_modules/*' -exec chmod 664 {} \;
+  find . -type d -not -path './node_modules/*' -exec chmod 775 {} \;
+
+.change_file_owner: &change_file_owner |
+  addgroup -S de_us -g 503 && adduser -S de_us -G de_us -u 503
+  chown -R de_us.de_us ./
+
+deploy-master:
+  stage: deploy
+  script:
+    - *init_rsync
+    - *change_file_permissions
+    - *change_file_owner
+    - rsync -av --delete --exclude=.git --password-file=/etc/rsync.secret --port=${RSYNC_HOST_PORT_TESTING} ./ root@${RSYNC_HOST_TESTING}::${RSYNC_MODULE_TESTING}
+  only:
+    - master
