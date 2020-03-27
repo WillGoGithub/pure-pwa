@@ -205,7 +205,7 @@ function InitNoticeUI() {
         registration.pushManager.getSubscription()
             .then(function (subscription) {
                 isSubscribed = !(subscription === null);
-                //SubscribeNotice();
+                SubscribeNotice();
             });
     }
 }
