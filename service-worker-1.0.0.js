@@ -5,6 +5,8 @@ var filesToCache = [
     '/Content/bootstrap.min.css',
     '/Content/site.min.css',
     '/Content/slot.min.css',
+    '/Content/wheel.min.css',
+    '/Content/poker.min.css',
     '/Content/Images/bg.png',
     '/Content/Images/logo-rectangle.png',
     '/Content/Images/side-nav-bg.jpg',
@@ -19,7 +21,9 @@ var filesToCache = [
     '/Scripts/jquery-3.3.1.min.js',
     '/Scripts/bootstrap.min.js',
     '/Scripts/app-1.0.0.min.js',
-    '/Scripts/slot.min.js'
+    '/Scripts/slot.min.js',
+    '/Scripts/wheel.min.js',
+    '/Scripts/poker.min.js'
 ];
 
 self.addEventListener('install', function (e) {

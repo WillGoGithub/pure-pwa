@@ -1,5 +1,8 @@
-﻿const MENU1 = 'Intro';
-const MENU2 = 'Slot';
+﻿const MENU1 = 'Welcome';
+const MENU2 = 'Intro';
+const MENU3 = 'Slot';
+const MENU4 = 'Wheel';
+const MENU5 = 'Poker';
 let registration = null;
 let isSubscribed = null;
 let dataReaded = false;
@@ -241,24 +244,30 @@ function RefreshApp() {
 function SwitchPage() {
     let $pageTitle = $('.js-pageName');
 
-    $('.table-list').hide();
-    $('.js-form-model').hide();
     $('.js-menu-item').removeClass('active');
+    $('.js-container-content').removeClass('active');
 
     switch (sessionStorage.Page) {
         case MENU1:
-            $pageTitle.text('PWA 介紹');
+            $pageTitle.text('首頁');
             break;
         case MENU2:
+            $pageTitle.text('PWA 介紹');
+            break;
+        case MENU3:
             $pageTitle.text('Slot 遊戲');
+            break;
+        case MENU4:
+            $pageTitle.text('Wheel 遊戲');
+            break;
+        case MENU5:
+            $pageTitle.text('Poker 遊戲');
             break;
     }
 
-    $('.js-form-model[data-target*="' + sessionStorage.Page + '"]').show();
-    $('.table-list[data-target="' + sessionStorage.Page + '"]').show();
     $('.js-menu-item[data-target="' + sessionStorage.Page + '"]').addClass('active');
+    $('.js-container-content[data-trigger="' + sessionStorage.Page + '"]').addClass('active');
     $('.js-side-nav').removeClass('visible');
-    //ReadDataList();
 }
 
 // 設定使用者名稱

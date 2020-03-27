@@ -28,5 +28,23 @@
     "inputFiles": [
       "Scripts/slot.js"
     ]
+  },
+  {
+    "outputFileName": "Scripts/wheel.min.js",
+    "inputFiles": [
+      "Scripts/wheel.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/wheel.min.css",
+    "inputFiles": [
+      "Content/wheel.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/poker.min.js",
+    "inputFiles": [
+      "Scripts/poker.js"
+    ]
   }
 ]

@@ -265,14 +265,14 @@ td.ellipsis div {
 .introduction ol li {
   margin-bottom: 0.5rem;
 }
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-}
+/*.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}*/
 .video-container {
   position: relative;
   width: 100%;
@@ -285,4 +285,13 @@ td.ellipsis div {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.welcome {
+  text-align: center;
+}
+.js-container-content {
+  display: none;
+}
+.js-container-content.active {
+  display: block;
 }
