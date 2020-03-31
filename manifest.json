@@ -1,38 +1,38 @@
 {
   "name": "+W PWA Demo",
   "short_name": "Pure PWA",
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fafafa",
   "theme_color": "#fafafa",
   "icons": [
     {
-      "src": "Images/Icons/icon-128x128.png",
+      "src": "/Content/Images/Icons/icon-128x128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "Images/Icons/icon-144x144.png",
+      "src": "/Content/Images/Icons/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "Images/Icons/icon-152x152.png",
+      "src": "/Content/Images/Icons/icon-152x152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "Images/Icons/icon-192x192.png",
+      "src": "/Content/Images/Icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "Images/Icons/icon-256x256.png",
+      "src": "/Content/Images/Icons/icon-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "Images/Icons/icon-512x512.png",
+      "src": "/Content/Images/Icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

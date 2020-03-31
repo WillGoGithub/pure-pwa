@@ -8,11 +8,11 @@ let reelDelay = 100;
 let money = 100;
 let moneyToAdd = 0;
 
-let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+//let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-let masterVolume = audioCtx.createGain();
-masterVolume.gain.setValueAtTime(0.05, audioCtx.currentTime);
-masterVolume.connect(audioCtx.destination);
+//let masterVolume = audioCtx.createGain();
+//masterVolume.gain.setValueAtTime(0.05, audioCtx.currentTime);
+//masterVolume.connect(audioCtx.destination);
 
 let getReelItem = () => {
     let newReel = document.createElement("div");
@@ -167,15 +167,15 @@ function playNote(freq, dur, type) {
     if (!freq) freq = 1000;
     if (!dur) dur = 1;
     if (!type) type = "square";
-    return new Promise(res => {
-        let oscillator = audioCtx.createOscillator();
-        oscillator.type = type;
-        oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime); // value in hertz
-        oscillator.connect(masterVolume);
-        oscillator.start();
-        oscillator.stop(audioCtx.currentTime + dur);
-        oscillator.onended = res;
-    });
+    //return new Promise(res => {
+    //    let oscillator = audioCtx.createOscillator();
+    //    oscillator.type = type;
+    //    oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime); // value in hertz
+    //    oscillator.connect(masterVolume);
+    //    oscillator.start();
+    //    oscillator.stop(audioCtx.currentTime + dur);
+    //    oscillator.onended = res;
+    //});
 }
 
 //fills reels

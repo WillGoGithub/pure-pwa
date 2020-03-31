@@ -44,6 +44,13 @@
     }
 }
 
+// 檢測是否從主螢幕啟動
+@media all and (display-mode: standalone) {
+    /*body {
+        background-color: yellow;
+    }*/
+}
+
 body {
     background-image: url('./Images/bg.png');
     font-family: 'Microsoft JhengHei UI', 'Microsoft JhengHei','Apple LiGothic Medium';
@@ -336,7 +343,7 @@ td.ellipsis {
     height: 100%;
 }
 
-.welcome {
+.welcome, .offline {
     text-align: center;
 }
 

@@ -35,6 +35,11 @@
     padding-right: 17px;
   }
 }
+@media all and (display-mode: standalone) {
+  /*body {
+        background-color: yellow;
+    }*/
+}
 body {
   background-image: url('Images/bg.png');
   font-family: 'Microsoft JhengHei UI', 'Microsoft JhengHei', 'Apple LiGothic Medium';
@@ -286,7 +291,8 @@ td.ellipsis div {
   width: 100%;
   height: 100%;
 }
-.welcome {
+.welcome,
+.offline {
   text-align: center;
 }
 .js-container-content {
