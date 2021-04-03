@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Content/site.css",
+    "inputFile": "Content/site.less"
+  },
+  {
+    "outputFile": "Content/slot.css",
+    "inputFile": "Content/slot.less"
+  },
+  {
+    "outputFile": "Content/wheel.css",
+    "inputFile": "Content/wheel.less"
+  },
+  {
+    "outputFile": "Content/poker.css",
+    "inputFile": "Content/poker.less"
+  }
+]

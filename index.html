@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>+W PWA Demo</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sample PWA demo by +W">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#007bff">
+    <meta name="apple-mobile-web-app-title" content="PWA Demo">
+    <link rel="apple-touch-icon" href="/Content/Images/Icons/icon-152x152.png">
+    <meta name="theme-color" content="#007bff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#007bff">
+    <meta name="msapplication-TileImage" content="/Content/Images/Icons/icon-152x152.png">
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="canonical" href="https://www-pwa.bckplat.info/" />
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/site.min.css" rel="stylesheet" />
+    <link href="/Content/slot.min.css" rel="stylesheet" />
+    <link href="/Content/wheel.min.css" rel="stylesheet" />
+    <link href="/Content/poker.min.css" rel="stylesheet" />
+
+    <script src="/Scripts/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <div id="form-app">
+        <nav class="navbar navbar-dark bg-primary">
+            <div class="row justify-content-lg-start">
+                <div class="col-auto">
+                    <button class="navbar-toggler js-navbar-toggler" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-auto">
+                    <button id="form-title" type="button" class="btn btn-primary js-pageName" disabled></button>
+                </div>
+            </div>
+        </nav>
+
+        <section class="side-nav js-side-nav">
+            <div class="side-nav-content js-side-nav-content">
+                <div class="side-nav-header text-center">
+                    <img id="img-userImage" class="rounded-circle">
+                    <h5>
+                        <span class="js-userName badge badge-pill badge-light"></span>
+                    </h5>
+                </div>
+                <div class="side-nav-body">
+                    <h3>
+                        <a class="dropdown-item js-menu-item" data-target="Welcome" href="#">
+                            <i class="material-icons">
+                                home
+                            </i>
+                            首頁
+                        </a>
+                    </h3>
+                    <h3>
+                        <a class="dropdown-item js-menu-item" data-target="Intro" href="#">
+                            <i class="material-icons">
+                                list_alt
+                            </i>
+                            PWA 介紹
+                        </a>
+                    </h3>
+                    <h3>
+                        <a class="dropdown-item js-menu-item" data-target="Slot" href="#">
+                            <i class="material-icons">
+                                attach_money
+                            </i>
+                            Slot 遊戲
+                        </a>
+                    </h3>
+                    <h3>
+                        <a class="dropdown-item js-menu-item" data-target="Wheel" href="#">
+                            <i class="material-icons">
+                                trip_origin
+                            </i>
+                            Wheel 遊戲
+                        </a>
+                    </h3>
+                    <h3>
+                        <a class="dropdown-item js-menu-item" data-target="Poker" href="#">
+                            <i class="material-icons">
+                                local_play
+                            </i>
+                            Poker 遊戲
+                        </a>
+                    </h3>
+                    <h3 class="fixed-bottom">
+                        <a id="btn-addHome" class="dropdown-item" href="#" hidden>
+                            <i class="material-icons">
+                                star_border
+                            </i>
+                            新增至桌面
+                        </a>
+                        <a id="btn-openNotice" class="dropdown-item invisible" href="#">
+                            <i class="material-icons">
+                                notifications_active
+                            </i>
+                            開啟通知
+                        </a>
+                        <a id="btn-refresh" class="dropdown-item" href="#">
+                            <i class="material-icons">
+                                refresh
+                            </i>
+                            重新整理
+                        </a>
+                        <a id="btn-logout" class="dropdown-item" href="/clear.html">
+                            <i class="material-icons">
+                                exit_to_app
+                            </i>
+                            重置
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+        <div class="container container-fluid form-content">
+            <div class="welcome js-container-content" data-trigger="Welcome">
+                <h3>這是 PWA 技術示範網站，點選左上角選單查看更多內容！</h3>
+                <br />
+                <img src="Content/Images/pwa.png" />
+                <br />
+                <img src="Content/Images/QR.png" />
+            </div>
+
+            <div class="introduction js-container-content" data-trigger="Intro">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/3tb-1MWg44Y" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+                </div>
+                <hr />
+                <p>　　漸進式網絡應用程式（英語：Progressive Web Apps，簡稱：PWA）是一種普通網頁或網站架構起來的網絡應用程式，但它可以以傳統應用程式或原生移動應用程式形式展示給用戶。這種應用程式形態視圖將目前最為現代化的瀏覽器提供的功能與行動裝置的體驗優勢相結合。</p>
+                <ol>
+                    <li>漸進式：用戶無需擔心使用哪個瀏覽器，也可以正常使用PWA。因為這些PWA以漸進增強作為核心信條。</li>
+                    <li>響應式：PWA適應包括電腦、手機、平板等其他常用設備在內的多種瀏覽環境。</li>
+                    <li>連接獨立性：利用服務工作執行緒，PWA可以離線或網絡情況較差的環境下工作。</li>
+                    <li>接近原生應用：為用戶提供更接近原生應用的交互體驗與導航。</li>
+                    <li>保持新版：歸功於服務工作執行緒的更新機制，PWA可以保證用戶永遠使用最新版本。</li>
+                    <li>安全：通過HTTPS，PWA可以阻止通訊竊聽，而且能保證內容不被篡改。</li>
+                    <li>可被發現：歸功於W3C提供的清單文件，以及服務工作執行緒的註冊範圍機制，PWA可被標識為「應用」，且搜尋引擎可以正常地索引PWA。</li>
+                    <li>可被組裝：類似推送通知這樣的功能在PWA上都可以輕鬆地被組裝。</li>
+                    <li>可被安裝：允許用戶直接「保留」PWA到他們的系統桌面，無需到應用商店完成麻煩的步驟。</li>
+                    <li>可被連結：只需輕鬆地分享URL便可連結至PWA中，無需複雜的安裝步驟。</li>
+                </ol>
+            </div>
+
+            <div class="slot js-container-content" data-trigger="Slot">
+                <div class="slot-container">
+                    <h1 class="title"> Smiley Slots </h1>
+                    <div class="money-container">
+                        <div id="money">100</div>
+                        <div class="changes"> </div>
+                    </div>
+
+                    <div class="play-area" onclick="startSpin()">
+                        <div class="reel-container"></div>
+                        <div class="reel-container"></div>
+                        <div class="reel-container"></div>
+                    </div>
+                    <hr />
+                    <div class="info">
+                        <div class="prize-table">
+                            <div class="doubles">
+                            </div>
+                            <div class="triples">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wheel js-container-content" data-trigger="Wheel">
+                <div class="wheel-container">
+                    <div class="main">
+                        <button type="button" class="btn" id="spin"><span class="btn-label">Spin</span></button>
+                        <button type="button" class="btn btn-reset" id="reset"><span class="btn-label">New Game</span></button>
+                        <div class="plate" id="plate">
+                            <ul class="inner">
+                                <li class="number"><label><input type="radio" name="pit" value="32" /><span class="pit">32</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="15" /><span class="pit">15</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="19" /><span class="pit">19</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="4" /><span class="pit">4</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="21" /><span class="pit">21</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="2" /><span class="pit">2</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="25" /><span class="pit">25</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="17" /><span class="pit">17</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="34" /><span class="pit">34</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="6" /><span class="pit">6</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="27" /><span class="pit">27</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="13" /><span class="pit">13</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="36" /><span class="pit">36</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="11" /><span class="pit">11</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="30" /><span class="pit">30</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="8" /><span class="pit">8</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="23" /><span class="pit">23</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="10" /><span class="pit">10</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="5" /><span class="pit">5</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="24" /><span class="pit">24</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="16" /><span class="pit">16</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="33" /><span class="pit">33</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="1" /><span class="pit">1</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="20" /><span class="pit">20</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="14" /><span class="pit">14</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="31" /><span class="pit">31</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="9" /><span class="pit">9</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="22" /><span class="pit">22</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="18" /><span class="pit">18</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="29" /><span class="pit">29</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="7" /><span class="pit">7</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="28" /><span class="pit">28</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="12" /><span class="pit">12</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="35" /><span class="pit">35</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="3" /><span class="pit">3</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="26" /><span class="pit">26</span></label></li>
+                                <li class="number"><label><input type="radio" name="pit" value="0" /><span class="pit">0</span></label></li>
+                            </ul>
+                            <div class="data">
+                                <div class="data-inner">
+                                    <div class="mask"></div>
+                                    <div class="result">
+                                        <div class="result-number">00</div>
+                                        <div class="result-color">red</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="previous-results">
+                            <ol class="previous-list">
+                                <li class='visuallyhidden placeholder'>No results yet.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="poker js-container-content" data-trigger="Poker">
+                <div class="poker-container">
+                    <div class="pack casino"></div>
+
+                    <div class="deck"></div>
+
+                    <div class="pack player-hand"></div>
+
+                    <div class="control clearfix">
+                        <div class="control-wrap">
+                            <div class="wager">
+                                <div class="bank" title="Your money">$<span></span></div>
+                                <div class="bet">
+                                    Bet <input title="Use UP/DOWN arrows to adjust bet" type="number" name="quantity" min="5" max="50" step="5" value="10" class="bet-val">
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <span class="deal-btn">
+                                    <button class="btn" title="Press 'D' to Deal">Deal</button>
+                                    <input title="Press 'A' for Autodeal" type="checkbox" class="autodeal" />
+                                </span>
+                                <button class="btn hit-btn" title="Press 'H' to Hit" disabled>Hit</button>
+                                <button class="btn stand-btn" title="Press 'S' to Stand" disabled>Stand</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="form-disconnected" class="alert alert-warning text-center form-disconnected" role="alert"
+             style="display:none;">
+            <strong id="form-disconnected-main" class="text-nowrap"></strong>
+            <span id="form-disconnected-msg" class="text-nowrap"></span>
+        </div>
+    </div>
+
+    <div class="loader" style="display: none"></div>
+
+    <noscript>
+        本系統需開啟 JavaScript 已利執行相關應用程式。
+    </noscript>
+
+    <script src="/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/install-1.0.0.min.js"></script>
+    <script src="/Scripts/app-1.0.1.min.js"></script>
+    <script src="/Scripts/slot.min.js"></script>
+    <script src="/Scripts/wheel.min.js"></script>
+    <script src="/Scripts/poker.min.js"></script>
+</body>
+
+</html>
