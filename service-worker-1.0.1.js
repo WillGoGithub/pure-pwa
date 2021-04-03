@@ -4,7 +4,7 @@ const FILES_TO_CACHE = [
   '/',
   '/index.html',
   '/offline.html',
-  '/favicon.ico',
+  '/favicon.png',
   '/Content/bootstrap.min.css',
   '/Content/site.min.css',
   '/Content/slot.min.css',

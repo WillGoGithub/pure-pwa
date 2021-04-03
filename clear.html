@@ -1,25 +1,24 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title></title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        alert('All Clear');
+      alert('All Clear');
 
-        navigator.serviceWorker.getRegistrations().then(function (registrations) {
-            for (let registration of registrations) {
-                registration.unregister()
-            }
-        })
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
 
-        caches.keys().then(function (names) {
-            for (let name of names)
-                caches.delete(name);
-        });
+      caches.keys().then(function (names) {
+        for (let name of names) caches.delete(name);
+      });
 
-        document.location.href = "/";
+      document.location.href = '/pure-pwa';
     </script>
-</body>
+  </body>
 </html>
