@@ -12,7 +12,6 @@ const FILES_TO_CACHE = [
   './Content/poker.min.css',
   './Content/Images/bg.png',
   './Content/Images/side-nav-bg.jpg',
-  './Content/Images/QR.png',
   './Content/Images/offline.jpg',
   './Content/Font/material-icons.woff2',
   './Content/Images/Icons/icon-128x128.png',
