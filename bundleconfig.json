@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "src/service-worker-1.0.1.min.js",
+    "inputFiles": [
+      "src/service-worker-1.0.1.js"
+    ]
+  }
+]
